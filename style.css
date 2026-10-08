@@ -1,0 +1,80 @@
+/* Thiết lập cho toàn bộ trang */
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+/* Card profile */
+.card {
+    width: 350px;
+    margin: 50px auto;
+    padding: 25px;
+    border: 2px solid #333;
+    border-radius: 15px;
+    background-color: white;
+    text-align: center;
+}
+
+/* Avatar */
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #333;
+    object-fit: cover;
+}
+
+/* Tên */
+.card h1 {
+    font-size: 30px;
+    margin: 15px 0 5px;
+}
+
+/* Nghề nghiệp */
+.card h2 {
+    font-size: 18px;
+    color: #666;
+    margin: 5px 0 15px;
+}
+
+/* Đoạn giới thiệu */
+.intro {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Tiêu đề kỹ năng */
+.card h3 {
+    margin-bottom: 10px;
+}
+
+/* Danh sách kỹ năng */
+.skills {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px;
+}
+
+/* Từng kỹ năng */
+.skills li {
+    display: inline-block;
+    background-color: #e0e0e0;
+    padding: 8px 12px;
+    margin: 4px;
+    border-radius: 8px;
+}
+
+/* Nút liên hệ */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #333;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+/* Hiệu ứng hover */
+.btn:hover {
+    background-color: #007bff;
+}
