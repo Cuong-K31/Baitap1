@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>❤️👌Xem bối tình yêu</h2>
+    <label for="">Nhập tên bạn</label>
+    <input type="text" id="tenban">
+    <br><br>
+    <label for="">Nhập tên crush</label>
+    <input type="text" id="tencrush">
+    <br><br>
+    <button onclick="tinhyeu()">Tính tình yêu</button>
+    <p id="ketqua"></p>
+    <script>
+        function tinhyeu() {
+            let tenban = document.getElementById("tenban").value;
+            let tencrush = document.getElementById("tencrush").value;
+            let ketqua = Math.floor(Math.random() * 100) + 1;
+            if(ketqua>50){            document.getElementById("ketqua").innerText = "Tỉ lệ tình yêu giữa " 
+            + tenban + " và " + tencrush + " là: " + ketqua + "%, Chúc mừng 2 bạn";}
+            else{
+                document.getElementById("ketqua").innerText = "Tỉ lệ tình yêu giữa " 
+                + tenban + " và " + tencrush + " là: " + ketqua + "%";
+            }
+        }
+    </script>
+</body>
+</html>

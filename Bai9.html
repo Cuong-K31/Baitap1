@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Chương trình quay thưởng</h2>
+    <button onclick="spin()">Quay thưởng</button>
+    <p id="result"></p>
+    <script>
+        function spin() {
+            let prizes = ["Giải nhất", "Giải nhì", "Giải ba", "Không trúng"];
+            let randomIndex = Math.floor(Math.random() * prizes.length);
+            document.getElementById("result").innerText = "Kết quả: " + prizes[randomIndex];
+        }
+    </script>
+</body>
+</html>

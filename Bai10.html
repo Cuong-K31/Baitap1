@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Máy tính đơn giản</h2>
+    <label for="num1">Số thứ nhất:</label>
+    <input type="number" id="num1" placeholder="Nhập số thứ nhất">
+    <br><br>
+    <label for="num2">Số thứ hai:</label>
+    <input type="number" id="num2" placeholder="Nhập số thứ hai">
+    <br><br>
+    <label for="pheptinh">Chọn phép tính:</label>
+    <select id="pheptinh">
+        <option value="cong">Cộng</option>
+        <option value="tru">Trừ</option>
+        <option value="nhan">Nhân</option>
+        <option value="chia">Chia</option>
+    </select>
+    <button onclick="calculate()">Tính</button>
+    <p id="result"></p>
+    <script>
+        function calculate() {
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            let operation = document.getElementById("pheptinh").value;
+            let result;
+
+            switch (operation) {
+                case "cong":
+                    result = num1 + num2;
+                    break;
+                case "tru":
+                    result = num1 - num2;
+                    break;
+                case "nhan":
+                    result = num1 * num2;
+                    break;
+                case "chia":
+                    result = num2 !== 0 ? num1 / num2 : "Lỗi: Chia cho zero";
+                    break;
+            }
+
+            document.getElementById("result").innerText = "Kết quả: " + result;
+        }
+        </script>
+</body>
+</html>

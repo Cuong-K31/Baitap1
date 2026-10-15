@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Chương trình xếp loại học lực</h2>
+    <label for="diem">Nhập điểm trung bình:</label>
+    <input type="number" id="diem" placeholder="Nhập điểm trung bình">
+    <br><br>
+    <button onclick="xeploai()">Xếp loại</button>
+    <p id="ketqua"></p>
+    <script>
+        function xeploai() {
+            let diem = document.getElementById("diem").value;
+            let ketqua = "";
+            if (diem >= 90 && diem <= 100) {
+                ketqua = "A";
+            } else if (diem >= 80 && diem < 90) {
+                ketqua = "B";
+            } else if (diem >= 70 && diem < 80) {
+                ketqua = "C";
+            } else if (diem >= 60 && diem < 70) {
+                ketqua = "D";
+            } else {
+                ketqua = "F";
+            }
+            document.getElementById("ketqua").innerText = "Xếp loại học lực: " + ketqua;
+        }
+    </script>
+</body>
+</html>

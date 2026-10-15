@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Đoán số may mắn</h2>
+    <label for="guessInput">Nhập số dự đoán (1-10):</label>
+    <input type="number" id="guessInput" placeholder="Nhập số dự đoán">
+    <br><br>
+    <button onclick="guessNumber()">Đoán</button>
+    <p id="result"></p>
+    <script>
+        function guessNumber() {
+            let guess = document.getElementById("guessInput").value;
+            let luckyNumber = Math.floor(Math.random() * 10) + 1; // Số may mắn từ 1 đến 10
+            if (guess == luckyNumber) {
+                document.getElementById("result").innerText = "Chúc mừng! Bạn đã đoán đúng số may mắn: " + luckyNumber;
+            } else {
+                document.getElementById("result").innerText = "Rất tiếc! Số may mắn là: " + luckyNumber + ". Hãy thử lại!";
+            }
+        }
+    </script>
+</body>
+</html>

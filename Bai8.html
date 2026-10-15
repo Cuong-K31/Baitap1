@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Dự đoán nghề nghiệp</h2>
+    <label for="name">Nhập tên của bạn:</label>
+    <input type="text" id="name" placeholder="Tên của bạn">
+    <br><br>
+    <button onclick="predictCareer()">Dự đoán</button>
+    <p id="result"></p>
+    <script>
+        function predictCareer() {
+            let name = document.getElementById("name").value;
+            let careers = ["Kỹ sư", "Bác sĩ", "Giáo viên", "Nghệ sĩ", "Nhà khoa học"];
+            let predictedCareer = careers[Math.floor(Math.random() * careers.length)];
+            document.getElementById("result").innerText = name + ", nghề nghiệp phù hợp với bạn là: " + predictedCareer;
+        }
+    </script>
+</body>
+</html>
